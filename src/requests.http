@@ -1,0 +1,13 @@
+@server = http://localhost:3000
+
+### GET /
+GET {{server}}/
+
+### GET /users/:id
+GET {{server}}/users/1
+
+### POST /form
+POST {{server}}/form
+Content-Type: application/x-www-form-urlencoded
+
+name=John&age=30
