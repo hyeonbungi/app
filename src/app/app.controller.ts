@@ -1,17 +1,7 @@
-import { Elysia, t } from 'elysia';
+import { Elysia } from 'elysia';
 
-const appController = new Elysia({ prefix: '' })
-  .get('/', 'Hello, Elysia!', {
-    detail: { tags: ['App'] },
-  })
-  .get('/users/:id', ({ params: { id } }) => id, {
-    params: t.Object({
-      id: t.Numeric(),
-    }),
-    detail: { tags: ['App'] },
-  })
-  .post('/form', ({ body }) => body, {
-    detail: { tags: ['App'] },
-  });
+const appController = new Elysia({ prefix: '', detail: { tags: ['App'] } })
+  .get('/', ({ path }) => path)
+  .post('/hello', 'Do you miss me?');
 
 export default appController;

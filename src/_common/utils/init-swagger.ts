@@ -14,6 +14,8 @@ export function initSwagger(app: Elysia) {
         tags: [
           { name: 'App', description: 'General endpoints' },
           { name: 'Auth', description: 'Authentication endpoints' },
+          { name: 'Notes', description: 'Notes endpoints' },
+          { name: 'Users', description: 'Users endpoints' },
         ],
       },
     }),
